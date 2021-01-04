@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    height: 40vh;
+    background-image: url(../back.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+
+#title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    font-size: 2em;
+    color: white; 
+}
+
+#nav-perso
+{
+    padding-right: 20vw !important;
+    padding-left: 20vw !important;
+    color: white;
+}
+
+#nav-perso a 
+{
+    color: white;
+}
+
+.test1
+{
+    margin-top: 10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+
+}
