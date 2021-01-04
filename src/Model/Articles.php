@@ -10,6 +10,8 @@ class Articles
     private string $content_article;
     private string $short_content_article;
     private int $id_user;
+    private int $id_picture;
+    private int $id_category;
 
     /**
      * Get the value of id_article
@@ -129,6 +131,46 @@ class Articles
     public function setDate_article($date_article)
     {
         $this->date_article = $date_article;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id_picture
+     */ 
+    public function getId_picture()
+    {
+        return $this->id_picture;
+    }
+
+    /**
+     * Set the value of id_picture
+     *
+     * @return  self
+     */ 
+    public function setId_picture($id_picture)
+    {
+        $this->id_picture = $id_picture;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id_category
+     */ 
+    public function getId_category()
+    {
+        return $this->id_category;
+    }
+
+    /**
+     * Set the value of id_category
+     *
+     * @return  self
+     */ 
+    public function setId_category($id_category)
+    {
+        $this->id_category = $id_category;
 
         return $this;
     }
