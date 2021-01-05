@@ -29,15 +29,12 @@
             Catégorie
           </a>
           <ul class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Hardaware</a></li>
+            <li><a class="dropdown-item" href="/category/hardware">Hardaware</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Science</a></li>
+            <li><a class="dropdown-item" href="/category/science">Science</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">fun</a></li>
+            <li><a class="dropdown-item" href="/category/fun">fun</a></li>
           </ul>
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/users/all">à propos</a>
-      </li>
       </ul>
     </div>
   </div>

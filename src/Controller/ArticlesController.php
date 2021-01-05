@@ -29,4 +29,10 @@ class ArticlesController
         $last3 = $this->articlesRepository->last();
         require __DIR__ . '/../View/articles/last.php';
     }
+
+    public function byCategory($cate)
+    {
+        $articles = $this->articlesRepository->findByCategory($cate);
+        require __DIR__ . '/../View/categories/oneCategory.php';
+    }
 }

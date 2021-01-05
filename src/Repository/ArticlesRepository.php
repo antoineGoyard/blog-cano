@@ -47,6 +47,18 @@ class ArticlesRepository
         return $last;
     }
 
+    public function findByCategory($cate){
+        $res = $this->DBManager->findBy($this->table,'id_category',$cate);
+        $articles= [];
+
+        foreach ($res as $result)
+        {
+            $articles[] = $this->toObject($result);
+        }
+        $articles = array_reverse($articles);
+        return $articles;
+    }
+
     public function findOneById($id)
     {
         $res = $this->DBManager->findOneBy($this->table,'id_article',$id);
