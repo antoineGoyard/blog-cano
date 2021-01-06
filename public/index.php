@@ -34,10 +34,11 @@ switch ($_GET['c']) {
                 $articlesController->byCategory(7);
                 break;
     }
-        break;
+    break;
 
     case 'admin':
-        require __DIR__ . '/../src/View/admin/admin.php';
+        $userController = new UsersController();
+        $userController->one();
     break;
    
     default:

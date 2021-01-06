@@ -22,4 +22,23 @@ class UsersController
         $users = $this->usersRepository->findAll();
         require __DIR__ . '/../View/users/all.php';
     }
+
+    public function one()
+    {
+        $user = $this->usersRepository-> findOneById(3);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+        {
+            if ($_POST['mail'] === $user->getMail_user()  && password_verify($_POST['pwd'] , $user->getPwd_user() ))
+            {
+                require __DIR__ . '/../View/admin/admin.php';
+                return;
+            } else
+                {
+                    var_dump('pas ok');
+                }
+        }
+       
+        require __DIR__ . '/../View/admin/adminConnection.php';
+    }
 }

@@ -27,11 +27,6 @@ class UsersRepository
         return $users;
     }
 
-    public function update($newU)
-    {
-        
-    }
-
     public function findOneById($id)
     {
         $res = $this->DBManager->findOneBy($this->table, 'id_user',$id);
