@@ -55,6 +55,7 @@ switch ($_GET['c']) {
                 case 'img':
                     $picturesController = new picturesController();
                     $picturesController->all();
+                    $picturesController->add();
                     break;
                 case 'category':
                     $categoriesController = new CategoriesController();

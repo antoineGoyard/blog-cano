@@ -57,14 +57,12 @@ class PDOManager implements DBManagerInterface
     public function insert(string $table, string $request)
     {
         $query = "INSERT INTO $table $request";
-        var_dump($query);
         $this->pdo->query($query);
     }
 
     public function update(string $table, string $request)
     {
         $query = "UPDATE $table SET $request";
-        var_dump($query);
         $this->pdo->query($query);
     }
 
