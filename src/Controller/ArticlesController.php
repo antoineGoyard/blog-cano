@@ -35,4 +35,12 @@ class ArticlesController
         $articles = $this->articlesRepository->findByCategory($cate);
         require __DIR__ . '/../View/categories/oneCategory.php';
     }
+
+    public function allAdmin()
+    {
+        $articlesAdmin = $this->articlesRepository->findAll();
+        require __DIR__ . '/../View/admin/articlesAdmin.php';
+
+    }
+    
 }

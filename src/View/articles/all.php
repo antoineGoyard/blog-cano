@@ -1,4 +1,5 @@
 <?php require __DIR__ . '/../template/header.php'; ?>
+
 <div class='test1'>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <?php foreach ($articles as $article) : ?>
@@ -15,4 +16,5 @@
         <?php endforeach; ?>
     </div>
 </div>
+
 <?php require __DIR__ . '/../template/footer.php'; ?>  

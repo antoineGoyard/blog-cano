@@ -23,7 +23,7 @@ class UsersController
         require __DIR__ . '/../View/users/all.php';
     }
 
-    public function one()
+    public function connectAdmin()
     {
         $user = $this->usersRepository-> findOneById(3);
 
@@ -31,7 +31,11 @@ class UsersController
         {
             if ($_POST['mail'] === $user->getMail_user()  && password_verify($_POST['pwd'] , $user->getPwd_user() ))
             {
+                session_start();
+                $_SESSION['login'] = $_POST['mail'];
+                $_SESSION['pwd'] = $user->getPwd_user() ;
                 require __DIR__ . '/../View/admin/admin.php';
+                
                 return;
             } else
                 {
