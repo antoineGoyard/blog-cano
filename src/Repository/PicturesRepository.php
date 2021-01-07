@@ -24,7 +24,6 @@ class PicturesRepository
         {
             $pictures[] = $this->toObject($result);
         }
-        var_dump($pictures);
         return $pictures;
     }
 

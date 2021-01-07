@@ -4,6 +4,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use App\Controller\UsersController;
 use App\Controller\ArticlesController;
+use App\Controller\PicturesController;
+use App\Controller\CategoriesController;
 use App\Controller\DefaultController;
 
 
@@ -47,9 +49,16 @@ switch ($_GET['c']) {
             switch ($_GET['a']) 
             {
                 case 'article':
-                    var_dump($_SESSION['login']);
                     $articlesController = new ArticlesController();
                     $articlesController->allAdmin();
+                    break;
+                case 'img':
+                    $picturesController = new picturesController();
+                    $picturesController->all();
+                    break;
+                case 'category':
+                    $categoriesController = new CategoriesController();
+                    $categoriesController->all();
                     break;
              }
         } else{

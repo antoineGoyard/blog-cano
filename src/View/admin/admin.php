@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Images</h5>
                         <p class="card-text">Gestion des images</p>
-                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                        <a href="/admin/img" class="btn btn-primary stretched-link">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Catégories</h5>
                         <p class="card-text">Gestion des catégories</p>
-                        <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                        <a href="/admin/category" class="btn btn-primary stretched-link">Go somewhere</a>
                     </div>
                 </div>
             </div>
