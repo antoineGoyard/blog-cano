@@ -29,16 +29,39 @@ class PicturesController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
         {
             var_dump('coucou1');
-            if (isset($_POST['add']))
+            if (isset($_POST['chargement']))
             {
-                var_dump('coucou2');
+                var_dump($_FILES);
+            
+                if($_FILES['monfichier']['error'] == 0){
+                    ?> <pre><?php print_r($_POST) ?> </pre> <?php
+                    
+                    //test taille
+                    if($_FILES['monfichier']['size'] > 1500000){
+                        $error = "Votre fichier est trop lourd.";
+                    }
+                    
+                    // test extension
+                    $extension = strrchr($_FILES['monfichier']['name'],'.');
+                    if($extension != '.jpg'){
+                        $error = "Votre fichier n'est pas conforme.";
+                    }
+            
+                    // au final :
+                    if(!isset($error)){
+                        var_dump("c'est la vie");
+                        move_uploaded_file($_FILES['monfichier']['tmp_name'], 'assets/img/'.$_FILES['monfichier']['name']);
+                        echo "le fichier est chargé";
+                    }
+            
+                }else{
+                    $error = "problème formulaire";
+                }
+
               $new = new Pictures;
-              $new->setName_picture($_POST['name']);
-              $new->setSource_picture($_POST['source']);
-              var_dump([$_POST['name']]);
-              var_dump([$_POST['source']]);
-              $this->PicturesRepository->insert($new);  
-              
+              $new->setName_picture($_FILES['monfichier']['name']);
+              $new->setSource_picture($_FILES['monfichier']['name']);
+              $this->PicturesRepository->insert($new);
             }
         }
     }
